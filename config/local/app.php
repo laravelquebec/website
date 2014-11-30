@@ -17,6 +17,7 @@ return [
 
     'providers' => [
 	    'Way\Generators\GeneratorsServiceProvider',
+        'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
     ],
 
 ];
