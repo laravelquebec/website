@@ -1,6 +1,6 @@
-<?php namespace App\Http\Controllers\Auth;
+<?php namespace LaravelQuebec\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
+use LaravelQuebec\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
 class AuthController extends Controller {

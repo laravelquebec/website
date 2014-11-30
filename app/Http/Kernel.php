@@ -1,4 +1,4 @@
-<?php namespace App\Http;
+<?php namespace LaravelQuebec\Http;
 
 use Exception;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
@@ -25,9 +25,9 @@ class Kernel extends HttpKernel {
 	 * @var array
 	 */
 	protected $routeMiddleware = [
-		'auth' => 'App\Http\Middleware\Authenticate',
+		'auth' => 'LaravelQuebec\Http\Middleware\Authenticate',
 		'auth.basic' => 'Illuminate\Auth\Middleware\AuthenticateWithBasicAuth',
-		'guest' => 'App\Http\Middleware\RedirectIfAuthenticated',
+		'guest' => 'LaravelQuebec\Http\Middleware\RedirectIfAuthenticated',
 	];
 
 }
