@@ -23,22 +23,22 @@ return [
 		'mysql' => [
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'homestead',
+			'database'  => getenv('DB_NAME'),
 			'username'  => 'homestead',
 			'password'  => 'secret',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
-			'prefix'    => '',
+			'prefix'    => getenv('DB_PREFIX'),
 		],
 
 		'pgsql' => [
 			'driver'   => 'pgsql',
 			'host'     => 'localhost',
-			'database' => 'homestead',
+			'database' => getenv('DB_NAME'),
 			'username' => 'homestead',
 			'password' => 'secret',
 			'charset'  => 'utf8',
-			'prefix'   => '',
+			'prefix'   => getenv('DB_PREFIX'),
 			'schema'   => 'public',
 		],
 

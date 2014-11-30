@@ -15,7 +15,7 @@ return [
 	|
 	*/
 
-	'default' => 'sync',
+	'default' => 'beanstalkd',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -77,7 +77,7 @@ return [
 	*/
 
 	'failed' => [
-		'database' => 'mysql', 'table' => 'failed_jobs',
+		'database' => getenv('DB_TYPE'), 'table' => 'failed_jobs',
 	],
 
 ];
