@@ -1,0 +1,1 @@
+/Users/vtalbot/Projects/laravel.quebec/website/resources/views/layouts/master.blade.php

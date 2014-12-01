@@ -11,22 +11,9 @@
 |
 */
 
-$router->get('/', 'WelcomeController@index');
+/** @var \Illuminate\Routing\Router $router */
+$router->get('auth', ['uses' => 'AuthController@getLogin', 'as' => 'login', 'middleware' => 'guest']);
+$router->resource('user', 'UsersController', ['only' => ['index', 'show', 'edit', 'update']]);
+$router->resource('discussion', 'DiscussionsController');
 
-$router->get('/home', 'HomeController@index');
-
-/*
-|--------------------------------------------------------------------------
-| Authentication & Password Reset Controllers
-|--------------------------------------------------------------------------
-|
-| These two controllers handle the authentication of the users of your
-| application, as well as the functions necessary for resetting the
-| passwords for your users. You may modify or remove these files.
-|
-*/
-
-$router->controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
-]);
+$router->get('/', ['uses' => 'DiscussionsController@index', 'as' => 'home']);

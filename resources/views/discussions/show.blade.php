@@ -1,0 +1,1 @@
+/Users/vtalbot/Projects/laravel.quebec/website/resources/views/discussions/show.blade.php
