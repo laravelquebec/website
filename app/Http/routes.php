@@ -13,6 +13,8 @@
 
 /** @var \Illuminate\Routing\Router $router */
 $router->get('auth', ['uses' => 'AuthController@login', 'as' => 'login', 'middleware' => 'guest']);
+$router->get('auth/logout', ['uses' => 'AuthController@logout', 'as' => 'logout', 'middleware' => 'auth']);
+
 $router->resource('user', 'UsersController', ['only' => ['index', 'show', 'edit', 'update']]);
 $router->resource('discussion', 'DiscussionsController');
 
