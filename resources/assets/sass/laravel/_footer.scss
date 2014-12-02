@@ -1,0 +1,66 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: $footer-height;
+	color: $footer-color;
+  background-color: $footer-bg;
+	font-family: 'Oswald Light';
+	
+	a {
+		color: $footer-link-color;
+		
+		&.btn-twitter {
+			background-color: $twitter-bg;
+			color: $twitter-color;
+			border-color: $twitter-border;
+			font-size: 1.5em;
+			padding: 3px 6px;
+			
+			&:hover {
+				color: $twitter-bg;
+				background-color: $twitter-color;
+				border-color: $twitter-color;
+			}
+		}
+
+		&.btn-github {
+			background-color: $github-bg;
+			color: $github-color;
+			border-color: $github-border;
+			font-size: 1.5em;
+			padding: 3px 6px;
+			
+			&:hover {
+				color: $github-bg;
+				background-color: $github-color;
+				border-color: $github-color;
+			}
+		}
+	}
+	
+	> .container {
+		line-height: 60px;
+		
+		p {
+			margin: 0;
+			padding: 0;
+		}
+	}
+	
+	.fa-heart {
+		color: $heart-color;
+	}
+	
+	.la-laravel {
+		color: $laravel-color;
+	}
+	
+	.la-forge {
+		color: $forge-color;
+	}
+	
+	.la-digitalocean {
+		color: $digitalocean-color;
+	}
+}

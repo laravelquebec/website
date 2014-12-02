@@ -1,0 +1,13 @@
+/* FONT PATH
+ * -------------------------- */
+
+@font-face {
+  font-family: 'LaravelFont';
+  src: url('#{$la-font-path}/LaravelFont.eot?-eh87m8');
+  src: url('#{$la-font-path}/LaravelFont.eot?#iefix-eh87m8') format('embedded-opentype'),
+    url('#{$la-font-path}/LaravelFont.woff?-eh87m8') format('woff'),
+    url('#{$la-font-path}/LaravelFont.ttf?-eh87m8') format('truetype'),
+    url('#{$la-font-path}/LaravelFont.svg?-eh87m8#LaravelFont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

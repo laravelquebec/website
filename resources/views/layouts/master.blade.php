@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Laravel Quebec</title>
-    <!-- Add styles there -->
+    <link rel="stylesheet" href="{{ elixir('css/laravel.css') }}">
 </head>
 
 <body>

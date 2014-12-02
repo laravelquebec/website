@@ -1,0 +1,21 @@
+// Base Class Definition
+// -------------------------
+
+.#{$la-css-prefix} {
+  display: inline-block;
+  font: normal normal normal 14px/1 LaravelFont;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	margin-top: 65px;
+	margin-bottom: 60px;
+}
+
+html {
+	position: relative;
+	min-height: 100%;
+}

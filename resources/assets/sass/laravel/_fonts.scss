@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Engschrift DIN D';
+    src: url('#{$font-path}engschriftdind-webfont.eot');
+    src: url('#{$font-path}engschriftdind-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-path}engschriftdind-webfont.woff2') format('woff2'),
+         url('#{$font-path}engschriftdind-webfont.woff') format('woff'),
+         url('#{$font-path}engschriftdind-webfont.ttf') format('truetype'),
+         url('#{$font-path}engschriftdind-webfont.svg#engschrift_din_dregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Oswald Light';
+    src: url('#{$font-path}oswald-light-webfont.eot');
+    src: url('#{$font-path}oswald-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-path}oswald-light-webfont.woff2') format('woff2'),
+         url('#{$font-path}oswald-light-webfont.woff') format('woff'),
+         url('#{$font-path}oswald-light-webfont.ttf') format('truetype'),
+         url('#{$font-path}oswald-light-webfont.svg#oswaldlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

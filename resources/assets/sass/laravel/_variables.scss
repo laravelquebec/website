@@ -1,0 +1,48 @@
+$la-font-path:        "../../fonts/" !default;
+$la-css-prefix:       la !default;
+$la-border-color:     #eee !default;
+$la-inverse:          #fff !default;
+$la-li-width:         (30em / 14) !default;
+
+$la-var-digitalocean: "\e600";
+$la-var-fleur-de-lys: "\e601";
+$la-var-forge:        "\e602";
+$la-var-laravel:      "\e603";
+
+$icon-font-path: "../../fonts/";
+$fa-font-path: "../../fonts/";
+$font-path: "../../fonts/";
+
+$navbar-height: 65px;
+$navbar-inverse-bg: #003c76;
+$navbar-inverse-link-color: #fff;
+$navbar-inverse-link-hover-bg: darken($navbar-inverse-bg, 10%) !default;
+$navbar-inverse-link-active-bg: transparent;
+
+$navbar-channels-bg: lighten($navbar-inverse-bg, 5%);
+$navbar-channels-link-color: #fff;
+$navbar-channels-link-hover-color: #fff;
+$navbar-channels-link-hover-bg: $navbar-inverse-bg;
+$navbar-channels-link-active-color: #fff;
+$navbar-channels-link-active-bg: $navbar-channels-link-hover-bg;
+
+$navbar-channels-btn-primary-color: #333;
+$navbar-channels-btn-primary-bg: #fff;
+$navbar-channels-btn-primary-hover-color: #fff;
+$navbar-channels-btn-primary-hover-bg: $navbar-inverse-bg;
+
+$footer-height: 60px;
+$footer-bg: #333;
+$footer-color: lighten($footer-bg, 40%);
+$footer-link-color: lighten($footer-color, 20%);
+
+$heart-color: #c3021b;
+$laravel-color: #fd5039;
+$github-bg: #000;
+$github-color: #fff;
+$github-border: $github-bg;
+$twitter-bg: #00b8ec;
+$twitter-color: #fff;
+$twitter-border: $twitter-bg;
+$forge-color: #4fb4b6;
+$digitalocean-color: #2987b9;

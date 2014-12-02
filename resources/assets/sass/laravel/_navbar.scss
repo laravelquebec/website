@@ -1,0 +1,49 @@
+.navbar {
+	font-family: 'Engschrift DIN D';
+	font-size: 1.1em;
+	text-transform: uppercase;
+	
+	.navbar-brand {
+		padding: 0;
+		
+		img {
+			height: 65px;
+		}
+	}
+	
+	.navbar-nav {
+		> li {
+			&.active > a > span {
+				border-bottom: solid 3px $navbar-inverse-link-active-color;
+			}
+			
+			&.dropdown > a.dropdown-toggle {
+				padding: 12px 12px 13px;
+				
+				img {
+					margin-right: 5px
+				}
+			}
+		}
+		
+		a.btn {
+			padding: 6px;
+
+			&.btn-primary {
+				border: 0;
+				background-color: #fff;
+				color: #333;
+
+				&:hover {
+					background-color: $navbar-inverse-link-hover-bg;
+					color: #fff;
+				}
+
+				.fa {
+					font-size: 1.3em;
+					line-height: 0;
+				}
+			}
+		}
+	}
+}

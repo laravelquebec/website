@@ -1,0 +1,40 @@
+.navbar-channels {
+	padding: 10px 0;
+	background-color: $navbar-channels-bg;
+	font-family: 'Engschrift DIN D';
+	font-size: 1.1em;
+	text-transform: uppercase;
+	
+	.nav-pills > li {
+		a {
+			color: $navbar-channels-link-color;
+			padding: 9px 10px;
+			
+			&:hover {
+				color: $navbar-channels-link-hover-color;
+				background-color: $navbar-channels-link-hover-bg;
+			}
+		}
+		
+		&.active a {
+			color: $navbar-channels-link-active-color;
+			background-color: $navbar-channels-link-active-bg;
+		}
+	}
+	
+	.btn {
+		margin-top: 4px;
+		font-size: 1em;
+		padding: 4px 8px;
+		
+		&.btn-primary {
+			color: $navbar-channels-btn-primary-color;
+			background-color: $navbar-channels-btn-primary-bg;
+			
+			&:hover {
+				color: $navbar-channels-btn-primary-hover-color;
+				background-color: $navbar-channels-btn-primary-hover-bg;
+			}
+		}
+	}
+}
