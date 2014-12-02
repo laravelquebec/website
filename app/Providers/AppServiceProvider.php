@@ -22,8 +22,13 @@ class AppServiceProvider extends ServiceProvider {
 	public function register()
 	{
 		$this->app->bind(
-			'Illuminate\Contracts\Auth\Registrar',
-			'LaravelQuebec\Services\Registrar'
+			'LaravelQuebec\Services\Auth\AuthenticateUser',
+			'LaravelQuebec\Services\Auth\GithubAuthenticateUser'
+		);
+
+		$this->app->bind(
+			'LaravelQuebec\Repositories\User\UserRepository',
+			'LaravelQuebec\Repositories\User\DbUserRepository'
 		);
 	}
 

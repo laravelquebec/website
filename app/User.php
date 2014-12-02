@@ -11,9 +11,10 @@ use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
  * @property string name
  * @property string email
  * @property string location
+ * @property string homepage
  * @property string avatar
  * @property string description
- * @property boolean available
+ * @property boolean hireable
  */
 class User extends Model implements AuthenticatableContract, CanResetPasswordContract {
 
@@ -38,7 +39,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['username', 'name', 'email', 'location', 'available', 'avatar', 'description'];
+	protected $fillable = ['username', 'name', 'email', 'location', 'hireable', 'avatar', 'description', 'homepage'];
 
 	/**
 	 * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
