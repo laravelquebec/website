@@ -16,6 +16,7 @@ class CreateChannelsTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('title')->unique();
+			$table->string('slug')->unique();
 			$table->integer('position');
 			$table->softDeletes();
 			$table->timestamps();

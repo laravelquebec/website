@@ -5,6 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
+use Laracasts\Presenter\PresentableTrait;
 
 /**
  * @property string username
@@ -14,11 +15,19 @@ use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
  * @property string homepage
  * @property string avatar
  * @property string description
+ * @property string company
  * @property boolean hireable
  */
 class User extends Model implements AuthenticatableContract, CanResetPasswordContract {
 
-	use Authenticatable, CanResetPassword;
+	use Authenticatable, CanResetPassword, PresentableTrait;
+
+	/**
+	 * The path to the presenter class.
+	 *
+	 * @var string
+	 */
+	protected $presenter = 'LaravelQuebec\Presenters\UserPresenter';
 
 	/**
 	 * The database table used by the model.
@@ -39,7 +48,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['username', 'name', 'email', 'location', 'hireable', 'avatar', 'description', 'homepage'];
+	protected $fillable = ['username', 'name', 'email', 'location', 'hireable', 'avatar', 'description', 'homepage', 'company'];
 
 	/**
 	 * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany

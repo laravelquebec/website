@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration {
 			$table->string('name')->nullable();
 			$table->string('location')->nullable();
 			$table->string('homepage')->nullable();
+			$table->string('company')->nullable();
 			$table->text('description')->nullable();
 			$table->boolean('hireable')->default(false);
 			$table->rememberToken();
