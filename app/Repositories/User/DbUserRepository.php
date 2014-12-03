@@ -42,4 +42,17 @@ class DbUserRepository implements UserRepository {
         return $this->findByUsername($username);
     }
 
+    /**
+     * @param  User $user
+     * @param  array $data
+     * @return bool
+     */
+    public function update(User $user, array $data)
+    {
+        if ( ! $user->exists) return false;
+
+        if ( ! isset($data['hireable'])) $data['hireable'] = false;
+
+        return $user->update($data);
+    }
 }

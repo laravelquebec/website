@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Response;
 use LaravelQuebec\Http\Requests;
+use LaravelQuebec\Http\Requests\UserRequest;
+use LaravelQuebec\Repositories\User\UserRepository;
 use LaravelQuebec\User;
 
 class UsersController extends Controller {
@@ -24,7 +26,7 @@ class UsersController extends Controller {
 	/**
 	 * Display the specified resource.
 	 *
-	 * @param  User  $username
+	 * @param  User  $user
 	 * @return Response
 	 */
 	public function show(User $user)
@@ -35,23 +37,25 @@ class UsersController extends Controller {
 	/**
 	 * Show the form for editing the specified resource.
 	 *
-	 * @param  string  $username
+	 * @param  User  $user
 	 * @return Response
 	 */
-	public function edit($username)
+	public function edit(User $user)
 	{
-		return view('users.edit');
+		return view('users.edit')->with('user', $user);
 	}
 
 	/**
 	 * Update the specified resource in storage.
 	 *
-	 * @param  string  $username
+	 * @param  User  $user
 	 * @return Response
 	 */
-	public function update($username)
+	public function update(User $user, UserRepository $userRepository, UserRequest $request)
 	{
-		//
+		$userRepository->update($user, $request->all());
+
+		return redirect()->route('user.show', [$user->username]);
 	}
 
 }

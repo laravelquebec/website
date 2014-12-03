@@ -1,5 +1,7 @@
 <?php namespace LaravelQuebec\Repositories\User;
 
+use LaravelQuebec\User;
+
 interface UserRepository {
 
     /**
@@ -20,5 +22,12 @@ interface UserRepository {
      * @return \LaravelQuebec\User
      */
     public function findByUsername($username, $columns = ['*']);
+
+    /**
+     * @param  User  $user
+     * @param  array  $data
+     * @return bool
+     */
+    public function update(User $user, array $data);
 
 }
