@@ -4,7 +4,7 @@
   <section class="profile">
   	<div class="container">
   		<div class="row">
-  			<div class="col-md-4 profile-user">
+  			<div class="col-md-3 profile-user">
   				<picture>
   					<img src="{{ $user->avatar }}&amp;s=263" alt="{{{ $user->username }}}" class="img-rounded">
 				</picture>
@@ -39,7 +39,7 @@
 				@endif
   			</div>
 
-  			<div class="col-md-8 profile-discussions" role="tabpanel">
+  			<div class="col-md-9 profile-discussions" role="tabpanel">
   				<ul class="nav nav-tabs" role="tablist">
   					<li role="presentation" class="active"><a href="#author" role="tab" data-toggle="tab">Auteur</a></li>
   					<li role="presentation"><a href="#participation" role="tab" data-toggle="tab">Participation</a></li>

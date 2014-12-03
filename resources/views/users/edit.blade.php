@@ -4,7 +4,7 @@
   <section class="profile">
   	<div class="container">
   		<div class="row">
-  			<div class="col-md-4 profile-user">
+  			<div class="col-md-3 profile-user">
   				<picture>
                     <img src="{{ $user->avatar }}&amp;s=263" alt="{{{ $user->username }}}" class="img-rounded">
                 </picture>

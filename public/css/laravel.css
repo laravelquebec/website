@@ -6230,7 +6230,6 @@ button.close {
   -moz-osx-font-smoothing: grayscale; }
 
 body {
-  margin-top: 65px;
   margin-bottom: 60px; }
 
 html {
@@ -6252,7 +6251,8 @@ html {
 .navbar {
   font-family: 'Engschrift DIN D';
   font-size: 1.1em;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin-bottom: 0; }
   .navbar .navbar-brand {
     padding: 0; }
     .navbar .navbar-brand img {
@@ -6347,7 +6347,7 @@ html {
 
 .profile {
   position: relative;
-  margin-top: 85px; }
+  margin-top: 15px; }
   .profile h1 {
     font-size: 2em;
     margin-bottom: 0;
