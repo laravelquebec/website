@@ -1,7 +1,9 @@
 <?php namespace LaravelQuebec\Http\Controllers;
 
+use Illuminate\Http\Response;
+use LaravelQuebec\Channel;
 use LaravelQuebec\Http\Requests;
-use LaravelQuebec\Http\Controllers\Controller;
+use LaravelQuebec\Repositories\Channel\ChannelRepository;
 
 class DiscussionsController extends Controller {
 
@@ -15,9 +17,11 @@ class DiscussionsController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index(Channel $channel = null, ChannelRepository $channelRepository)
 	{
-		return view('discussions.index');
+		$channels = $channelRepository->getAll();
+
+		return view('discussions.index')->with('currentChannel', $channel)->with('channels', $channels);
 	}
 
 	/**

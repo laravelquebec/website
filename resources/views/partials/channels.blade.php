@@ -3,13 +3,14 @@
         <div class="row">
             <div class="col-md-9">
                 <ul class="nav nav-pills">
-                    <li class="active"><a href="signed.html">Tout</a></li>
-                    <li><a href="#">Général</a></li>
-                    <li><a href="#">Amélioration du site</a></li>
-                    <li><a href="#">Trucs &amp; Astuces</a></li>
-                    <li><a href="#">Aide</a></li>
-                    <li><a href="#">Anonces</a></li>
-                    <li><a href="#">Packages</a></li>
+                    <li {!! !$currentChannel->slug ? ' class="active"' : '' !!}><a href="{{ route('home') }}">Tout</a></li>
+                    @foreach ($channels as $channel)
+                        @if ($channel->slug != $currentChannel->slug)
+                            <li><a href="{{ route('channel', [$channel->slug]) }}">{{ $channel->title }}</a></li>
+                        @else
+                            <li class="active"><a href="{{ route('channel', [$channel->slug]) }}">{{{ $channel->title }}}</a></li>
+                        @endif
+                    @endforeach
                 </ul>
             </div>
 

@@ -1,7 +1,8 @@
 <?php namespace LaravelQuebec\Http\Controllers;
 
+use Illuminate\Http\Response;
 use LaravelQuebec\Http\Requests;
-use LaravelQuebec\Http\Controllers\Controller;
+use LaravelQuebec\User;
 
 class UsersController extends Controller {
 
@@ -23,12 +24,12 @@ class UsersController extends Controller {
 	/**
 	 * Display the specified resource.
 	 *
-	 * @param  string  $username
+	 * @param  User  $username
 	 * @return Response
 	 */
-	public function show($username)
+	public function show(User $user)
 	{
-		return view('users.show');
+		return view('users.show')->with('user', $user);
 	}
 
 	/**

@@ -18,4 +18,6 @@ $router->get('auth/logout', ['uses' => 'AuthController@logout', 'as' => 'logout'
 $router->resource('user', 'UsersController', ['only' => ['index', 'show', 'edit', 'update']]);
 $router->resource('discussion', 'DiscussionsController');
 
+$router->get('channel/{channel}', ['uses' => 'DiscussionsController@index', 'as' => 'channel']);
+
 $router->get('/', ['uses' => 'DiscussionsController@index', 'as' => 'home']);

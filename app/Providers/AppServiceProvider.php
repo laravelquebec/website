@@ -30,6 +30,11 @@ class AppServiceProvider extends ServiceProvider {
 			'LaravelQuebec\Repositories\User\UserRepository',
 			'LaravelQuebec\Repositories\User\DbUserRepository'
 		);
+
+		$this->app->bind(
+			'LaravelQuebec\Repositories\Channel\ChannelRepository',
+			'LaravelQuebec\Repositories\Channel\DbChannelRepository'
+		);
 	}
 
 }

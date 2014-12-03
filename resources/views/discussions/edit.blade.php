@@ -1,1 +1,1 @@
-/Users/vtalbot/Projects/laravel.quebec/website/resources/views/discussions/edit.blade.php
+@extends('layouts.master')

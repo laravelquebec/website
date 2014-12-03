@@ -46,3 +46,6 @@ $twitter-color: #fff;
 $twitter-border: $twitter-bg;
 $forge-color: #4fb4b6;
 $digitalocean-color: #2987b9;
+
+$profile-name-color: #333;
+$profile-username-color: lighten($profile-name-color, 30%);

@@ -1,0 +1,17 @@
+.profile {
+  position: relative;
+  margin-top: 85px;
+
+  h1 {
+    font-size: 2em;
+    margin-bottom: 0;
+    color: $profile-name-color;
+  }
+
+  h2 {
+    font-size: 1.4em;
+    margin-top: 0;
+    color: $profile-username-color;
+    font-weight: normal;
+  }
+}

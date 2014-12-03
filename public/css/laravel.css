@@ -6344,3 +6344,16 @@ html {
     color: #4fb4b6; }
   .footer .la-digitalocean {
     color: #2987b9; }
+
+.profile {
+  position: relative;
+  margin-top: 85px; }
+  .profile h1 {
+    font-size: 2em;
+    margin-bottom: 0;
+    color: #333; }
+  .profile h2 {
+    font-size: 1.4em;
+    margin-top: 0;
+    color: #808080;
+    font-weight: normal; }

@@ -2,6 +2,7 @@
 
 use Illuminate\Routing\Router;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
+use Illuminate\Routing\UrlGenerator;
 
 class RouteServiceProvider extends ServiceProvider {
 
@@ -25,6 +26,9 @@ class RouteServiceProvider extends ServiceProvider {
 		parent::boot($router);
 
 		//
+		$router->bind('channel', 'LaravelQuebec\Repositories\Channel\ChannelRepository');
+
+		$router->bind('user', 'LaravelQuebec\Repositories\User\UserRepository');
 	}
 
 	/**
