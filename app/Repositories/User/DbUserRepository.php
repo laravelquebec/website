@@ -20,17 +20,25 @@ class DbUserRepository implements UserRepository {
      */
     public function findByUsernameOrCreate($userData)
     {
-        return User::firstOrCreate([
+        $user = User::firstOrNew([
             'username' => $userData->nickname,
-            'name' => $userData->name,
-            'email' => $userData->email,
-            'avatar' => $userData->avatar,
-            'location' => $userData->user['location'],
-            'hireable' => $userData->user['hireable'],
-            'description' => $userData->user['bio'],
-            'homepage' => $userData->user['blog'],
-            'company' => $userData->user['company'],
         ]);
+
+        if ( ! $user->exists)
+        {
+            $user->update([
+                'name' => $userData->name,
+                'email' => $userData->email,
+                'avatar' => $userData->avatar,
+                'location' => $userData->user['location'],
+                'hireable' => $userData->user['hireable'],
+                'description' => $userData->user['bio'],
+                'homepage' => $userData->user['blog'],
+                'company' => $userData->user['company'],
+            ]);
+        }
+
+        return $user;
     }
 
     /**
